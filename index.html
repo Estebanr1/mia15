@@ -9,7 +9,7 @@
   <meta property="og:title" content="Mía XV — Invitación" />
   <meta property="og:description" content="¡Te espero para celebrar mis 15!" />
   <!-- <meta property="og:type" content="website" /> -->
-  <meta property="og:image" content="assets/hero.jpg" />
+  <meta property="og:image" content="assets/hero.jpeg" />
   <meta name="theme-color" content="#111827" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -144,7 +144,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url('assets/hero.jpg') center/cover no-repeat fixed;
+      background: url('assets/hero.jpeg') center/cover no-repeat fixed;
       filter: brightness(.55) saturate(1.15);
     }
 
@@ -152,8 +152,8 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(1200px 600px at 50% 0%, rgba(255, 77, 166, .25), transparent 60%),
-        radial-gradient(1200px 600px at 50% 100%, rgba(167, 139, 250, .2), transparent 65%);
+      /* background: radial-gradient(1200px 600px at 50% 0%, rgba(255, 77, 166, .25), transparent 60%),
+        radial-gradient(1200px 600px at 50% 100%, rgba(167, 139, 250, .2), transparent 65%); */
       pointer-events: none;
     }
 
@@ -184,11 +184,11 @@
       font-size: clamp(4rem, 12vw, 8rem);
       font-weight: 700;
       letter-spacing: .02em;
-      background: linear-gradient(90deg, var(--brand), var(--accent));
+      background: radial-gradient(circle at center, var(--brand), var(--accent));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      text-shadow: 0 0 24px rgba(255, 77, 166, .25)
+      text-shadow: 0 0 24px rgb(255, 255, 255)
     }
 
     .subtitle {
@@ -246,56 +246,63 @@
     }
 
 
-.timebox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.2rem;
-    text-align: center;
-}
+    .timebox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.2rem;
+      text-align: center;
+    }
 
-.number-wrapper h3 {
-    margin: 0;
-    font-size: clamp(2rem, 4vw, 2.6rem);
-}
+    .number-wrapper h3 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+    }
 
-.label-wrapper .label {
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin-top: 0.5rem; /* Agrega un pequeño espacio entre el número y el texto */
-}
+    .label-wrapper .label {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      /* Agrega un pequeño espacio entre el número y el texto */
+    }
 
     .timebox h3 {
       font-size: clamp(2rem, 4vw, 2.6rem)
     }
 
-   /* Nuevo CSS para la grilla que contiene todo el contador */
-.countdown {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.5rem; /* Aumenta la separación entre las columnas */
-    text-align: center; /* Centra los elementos hijos horizontalmente */
-}
+    /* Nuevo CSS para la grilla que contiene todo el contador */
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      /* Aumenta la separación entre las columnas */
+      text-align: center;
+      /* Centra los elementos hijos horizontalmente */
+    }
 
-/* Modificación para el número dentro de la tarjeta */
-.glass-card.timebox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px; /* Puedes ajustar la altura para que las tarjetas sean más grandes */
-    margin-bottom: 0.5rem; /* Agrega espacio entre la tarjeta y el texto de abajo */
-}
+    /* Modificación para el número dentro de la tarjeta */
+    .glass-card.timebox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      /* Puedes ajustar la altura para que las tarjetas sean más grandes */
+      margin-bottom: 0.5rem;
+      /* Agrega espacio entre la tarjeta y el texto de abajo */
+    }
 
-/* El texto de "días", "horas", etc. */
-.label-wrapper {
-    text-align: center;
-}
+    /* El texto de "días", "horas", etc. */
+    .label-wrapper {
+      text-align: center;
+    }
 
-.label {
-    color: var(--muted);
-    font-size: .95rem;
-}
+    .label {
+      color: white;
+      /* var(--muted); */
+      font-size: .95rem;
+      position: relative;
+    }
 
     /* Info cards */
     .grid {
@@ -361,6 +368,8 @@
         Sábado <strong>22 de Noviembre |</strong>
         Horario <strong>21:00 hs</strong> a <strong>05:00 hs | </strong>
         Salón <strong>Craigmhor Salón Plata</strong>
+        <br>
+        <br>
       </p>
       <div class="cta-row">
         <a href="#rsvp" class="btn primary">Confirmar asistencia</a>
@@ -368,19 +377,75 @@
       </div>
       <div class="cta-row" style="margin-top:.6rem">
         <br>
-        <span class="pill">Dress code: Elegante</span>
+        <span class="pill">Dress code: Elegante Sport</span>
       </div>
       <br>
-      <br>
-      <br>
-      <h2>¡Faltan…</h2>
+
+      <h2><strong>¡FALTAN…</strong></h2>
     </div>
+
+    <section class="section container" id="faltan">
+
+      <div class="countdown">
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h3 id="dd">00</h3>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h2><strong>DIAS</strong></h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h3 id="hh">00</h3>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h2><strong>HORAS</strong></h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h3 id="mm">00</h3>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h2><strong>MIN</strong></h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h3 id="ss">00</h3>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h2><strong>SEG</strong></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
 
   </header>
 
   <main>
 
-    
+
     <!-- <section class="section container" id="faltan">
      
       <div class="countdown">
@@ -409,51 +474,25 @@
 
      
     </section> -->
-
-    <section class="section container" id="faltan">
-    
-    <div class="countdown">
-        <div>
-            <div class="glass-card timebox">
-                <div class="number-wrapper"><h3 id="dd">00</h3></div>
-            </div>
-            <div class="label-wrapper"><div class="label"><strong>DIAS</strong></div></div>
-        </div>
-        <div>
-            <div class="glass-card timebox">
-                <div class="number-wrapper"><h3 id="hh">00</h3></div>
-            </div>
-            <div class="label-wrapper"><div class="label"><strong>HORAS</strong></div></div>
-        </div>
-        <div>
-            <div class="glass-card timebox">
-                <div class="number-wrapper"><h3 id="mm">00</h3></div>
-            </div>
-            <div class="label-wrapper"><div class="label"><strong>MINUTOS</strong></div></div>
-        </div>
-        <div>
-            <div class="glass-card timebox">
-                <div class="number-wrapper"><h3 id="ss">00</h3></div>
-            </div>
-            <div class="label-wrapper"><div class="label"><strong>SEGUNDOS</strong></div></div>
-        </div>
-    </div>
-</section>
-
-<section class="section container" id="ubicacion" >
+    <section class="section container" id="ubicacion">
       <!-- <div class="container"> -->
-        <div class="glass-card card" style="width: max-content; padding: 0.3rem 1rem;">
+      <div class="glass-card card" style="width: max-content; padding: 0.3rem 1rem;">
         <h2>Ubicación</h2>
         <p class="subtitle">SALÓN Craigmhor <br> Plata Francisco Bilbao 2930, CABA</p>
-        
+
       </div>
       <div style="padding: 0.5rem 1rem;">
         <div class="glass-card" style="overflow:hidden; border-radius:1rem ">
           <!-- Reemplazar src con el embed real de Google Maps -->
-          <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div></div>
-      
+          <iframe title="Mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
     </section>
+
 
 
     <section class="section container" id="rsvp">
