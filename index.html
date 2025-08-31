@@ -17,7 +17,7 @@
     rel="stylesheet">
   <style>
     :root {
-      --bg: #0b0b0c;
+      --bg: #0c0c0c;
       --bg-2: #121216;
       --txt: #f5f5f7;
       --muted: #c9cad1;
@@ -90,7 +90,7 @@
       border: 1px solid var(--glass-brd);
       text-decoration: none;
       font-weight: 600;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .03));
+      background: linear-gradient(180deg, rgba(255, 254, 254, 0.07), rgba(255, 255, 255, .03));
       text-align: center;
       /* Agrega esta línea */
     }
@@ -154,7 +154,7 @@
       position: absolute;
       inset: 0;
       background: url('assets/hero.jpg') center/cover no-repeat fixed;
-      filter: brightness(.55) saturate(1.15);
+      /* filter: brightness(.55) saturate(1.15); */
     }
 
     .hero::after {
@@ -401,16 +401,15 @@
         <br> 
         <br>
       </p>
-      <div class="cta-row">
+      <!-- <div class="cta-row">
         <a href="#rsvp" class="btn primary">Confirmar asistencia</a>
         <a href="#ubicacion" class="btn">Ver ubicación</a><br>
-      </div>
+      </div> -->
       <div class="cta-row" style="margin-top:.6rem">
         <br>
-        <span class="pill">Dress code: Elegante Sport</span>
+        <span class="badge">Dress code: Elegante Sport</span>
       </div>
       <br><br><br><br>
-      <h1><strong>¡FALTAN…</strong></h1>
       
     </div>
 
@@ -421,6 +420,9 @@
   </header>
 
   <main>
+
+
+    <h1 style="text-align: center;"><strong>¡FALTAN…</strong></h1>
 
     
     <section class="section container" id="faltan">
@@ -481,7 +483,7 @@
    >
       <div class="glass-card ubicacion-mapa-container">
           <h2>Ubicación</h2>
-          <p class="subtitle">SALÓN Craigmhor Plata <br> Francisco Bilbao 2930, CABA</p>
+          <p class="subtitle" style="text-align: center;">SALÓN Craigmhor Plata <br> Francisco Bilbao 2930, CABA</p>
           <iframe title="Mapa"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar"
               width="90%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
@@ -496,7 +498,7 @@
      <div class="glass-card ubicacion-mapa-container">
       
         <h2>Confirmá tu asistencia</h2>
-        <p class="subtitle">Por favor, confirmá antes del <strong>10 de octubre</strong>.</p>
+        
       <div style="width: max-content; padding: 0.7rem 1.2rem;">
         <a class="btn primary"
           href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!%20Confirmo%20mi%20asistencia%20a%20tus%2015"
@@ -506,47 +508,16 @@
  </section>
 
    
-    <!-- <section class="section container" id="ubicacion"> -->
-      <!-- <div class="container"> -->
-      <!-- <div class="glass-card card" style="width: max-content; padding: 0.3rem 1rem;">
-        
-
-      </div><div style="padding: 0.5rem 1rem; margin: 0 auto" >
-        <div class="glass-card" style="overflow:hidden; border-radius:1rem; ; ">
-          <h2 style="font-family: nom; text-align: center;" >Ubicación</h2>
-           <p class="subtitle" style="text-align: center;">SALÓN Craigmhor <br> Plata Francisco Bilbao 2930, CABA</p>
-        
-          <iframe title="Mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar"
-            width="90%" height="250" style="border:5;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"  >
-          </iframe>
-        </div>
-      </div>
-      
-
-    </section> -->
-
-
-<!-- 
-    <section class="section container" id="rsvp">
-      <div class="glass-card card" style="width: max-content; padding: 0.5rem 1rem;">
-        <h2>Confirmá tu asistencia</h2>
-        <p class="subtitle">Por favor, confirmá antes del <strong>10 de octubre</strong>.</p>
-      <div style="width: max-content; padding: 0.7rem 1.2rem;">
-        <a class="btn primary"
-          href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!%20Confirmo%20mi%20asistencia%20a%20tus%2015"
-          target="_blank" rel="noopener">WhatsApp</a>
-      </div></div> -->
-     
-     
+  
 
       <section class="section container" id="regalo2">
        <div class="glass-card ubicacion-mapa-container">
-         <p class="subtitle" style="margin-top:1rem">Regalo sugerido: sobre o <a href="#">alias bancario</a>.</p>
+        <h2>Alias Bancario</h2>
 
-         <a class="btn primary"  target="_blank" rel="noopener">
-             Mia Ramirez Prieto <br> Alias: 15MiaRamirez <br> CVU: 0000003100068482561390 <br> CUIT/CUIL: 27505126977
+         <a class="btn primary"  target="_blank" rel="noopener" style="text-align: center;">
+             Mia Ramirez Prieto <br> 
+             Alias: 15MiaRamirez<br> 
+             CVU: 0000003100068482561390 <br> CUIT/CUIL: 27505126977
          </a>
      
         </div>
