@@ -9,7 +9,7 @@
   <meta property="og:title" content="Mía XV — Invitación" />
   <meta property="og:description" content="¡Te espero para celebrar mis 15!" />
   <!-- <meta property="og:type" content="website" /> -->
-  <meta property="og:image" content="assets/hero.jpeg" />
+  <meta property="og:image" content="assets/hero.jpg" />
   <meta name="theme-color" content="#111827" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -30,6 +30,7 @@
       --card: rgba(255, 255, 255, 0.04);
     }
 
+
     * {
       box-sizing: border-box
     }
@@ -38,6 +39,13 @@
     body {
       height: 100%;
     }
+ @font-face {
+    font-family: 'nombreMia'; /* El nombre que le asignes */
+    src: url('assets/font1.otf') format('opentype'); /* Asegúrate de que la ruta sea correcta */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
     body {
       margin: 0;
@@ -55,6 +63,7 @@
       line-height: 1.2;
       margin: 0 0 .6rem
     }
+  
 
     h1 {
       font-size: clamp(2.4rem, 6vw, 4rem)
@@ -144,7 +153,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url('assets/hero.jpeg') center/cover no-repeat fixed;
+      background: url('assets/hero.jpg') center/cover no-repeat fixed;
       filter: brightness(.55) saturate(1.15);
     }
 
@@ -160,7 +169,7 @@
     .hero-inner {
       position: relative;
       z-index: 1;
-      padding: 3rem 1rem;
+      padding: 1.5rem 1rem;
     }
 
     .badge {
@@ -204,6 +213,27 @@
       box-shadow: 0 10px 40px rgba(0, 0, 0, .35)
     }
 
+    .location-wrapper {
+    width: 100%;
+    max-width: 700px; /* Puedes ajustar este valor para controlar el ancho máximo */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ubicacion-mapa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; /* Puedes ajustar este valor si quieres más espacio alrededor */
+}
+
+.ubicacion-mapa-container iframe {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px; /* Opcional: para evitar que el mapa sea demasiado grande en pantallas amplias */
+}
+
     .pill {
       display: inline-flex;
       align-items: center;
@@ -242,7 +272,7 @@
 
     /* Countdown */
     .section {
-      padding: 5rem 0
+      padding: 3rem 0
     }
 
 
@@ -359,8 +389,8 @@
     <div class="hero-inner">
       <div class="badge">Invitación</div>
       <div class="title">
-
         <span>MÍA XV</span>
+        
       </div>
 
 
@@ -368,7 +398,7 @@
         Sábado <strong>22 de Noviembre |</strong>
         Horario <strong>21:00 hs</strong> a <strong>05:00 hs | </strong>
         Salón <strong>Craigmhor Salón Plata</strong>
-        <br>
+        <br> 
         <br>
       </p>
       <div class="cta-row">
@@ -379,64 +409,11 @@
         <br>
         <span class="pill">Dress code: Elegante Sport</span>
       </div>
-      <br>
-
-      <h2><strong>¡FALTAN…</strong></h2>
+      <br><br><br><br>
+      <h1><strong>¡FALTAN…</strong></h1>
+      
     </div>
 
-    <section class="section container" id="faltan">
-
-      <div class="countdown">
-        <div>
-          <div class="glass-card timebox">
-            <div class="number-wrapper">
-              <h3 id="dd">00</h3>
-            </div>
-          </div>
-          <div class="label-wrapper">
-            <div class="label">
-              <h2><strong>DIAS</strong></h2>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="glass-card timebox">
-            <div class="number-wrapper">
-              <h3 id="hh">00</h3>
-            </div>
-          </div>
-          <div class="label-wrapper">
-            <div class="label">
-              <h2><strong>HORAS</strong></h2>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="glass-card timebox">
-            <div class="number-wrapper">
-              <h3 id="mm">00</h3>
-            </div>
-          </div>
-          <div class="label-wrapper">
-            <div class="label">
-              <h2><strong>MIN</strong></h2>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="glass-card timebox">
-            <div class="number-wrapper">
-              <h3 id="ss">00</h3>
-            </div>
-          </div>
-          <div class="label-wrapper">
-            <div class="label">
-              <h2><strong>SEG</strong></h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
 
@@ -445,72 +422,139 @@
 
   <main>
 
+    
+    <section class="section container" id="faltan">
 
-    <!-- <section class="section container" id="faltan">
-     
       <div class="countdown">
-        <div class="glass-card timebox"><h3 id="dd">00</h3><div class="label">días</div></div>
-        <div class="glass-card timebox"><h3 id="hh">00</h3><div class="label">horas</div></div>
-        <div class="glass-card timebox"><h3 id="mm">00</h3><div class="label">minutos</div></div>
-        <div class="glass-card timebox"><h3 id="ss">00</h3><div class="label">segundos</div></div>
-      </div>
-    </section> -->
-
-    <!-- <section class="section container" id="info">
-      <div class="grid grid-3">
-        <div class="glass-card card">
-          <h3>Recepción</h3>
-          <p>21:00 hs — brindis de bienvenida.</p>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h1 id="dd">00</h1>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h3><strong>DIAS</strong></h3>
+            </div>
+          </div>
         </div>
-        <div class="glass-card card">
-          <h3>Cena</h3>
-          <p>Menú principal + opción veggie. Avisar alergias.</p>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h1 id="hh">00</h1>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h3><strong>HORAS</strong></h3>
+            </div>
+          </div>
         </div>
-        <div class="glass-card card">
-          <h3>Fiesta</h3>
-          <p>Música toda la noche. ¡Traé tu mejor energía!</p>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h1 id="mm">00</h1>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h3><strong>MIN</strong></h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="glass-card timebox">
+            <div class="number-wrapper">
+              <h1 id="ss">00</h1>
+            </div>
+          </div>
+          <div class="label-wrapper">
+            <div class="label">
+              <h3><strong>SEG</strong></h3>
+            </div>
+          </div>
         </div>
       </div>
-
-     
-    </section> -->
-    <section class="section container" id="ubicacion">
-      <!-- <div class="container"> -->
-      <div class="glass-card card" style="width: max-content; padding: 0.3rem 1rem;">
-        <h2>Ubicación</h2>
-        <p class="subtitle">SALÓN Craigmhor <br> Plata Francisco Bilbao 2930, CABA</p>
-
-      </div>
-      <div style="padding: 0.5rem 1rem;">
-        <div class="glass-card" style="overflow:hidden; border-radius:1rem ">
-          <!-- Reemplazar src con el embed real de Google Maps -->
-          <iframe title="Mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar"
-            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
     </section>
 
+    <section class="section container" id="ubicacion" 
+   >
+      <div class="glass-card ubicacion-mapa-container">
+          <h2>Ubicación</h2>
+          <p class="subtitle">SALÓN Craigmhor Plata <br> Francisco Bilbao 2930, CABA</p>
+          <iframe title="Mapa"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar"
+              width="90%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
+  </section>
 
 
-    <section class="section container" id="rsvp">
-      <div class="glass-card card" style="width: max-content; padding: 0.5rem 1rem;">
+  <section class="section container" id="rsvp" 
+  >
+     <div class="glass-card ubicacion-mapa-container">
+      
         <h2>Confirmá tu asistencia</h2>
         <p class="subtitle">Por favor, confirmá antes del <strong>10 de octubre</strong>.</p>
-      </div>
       <div style="width: max-content; padding: 0.7rem 1.2rem;">
         <a class="btn primary"
           href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!%20Confirmo%20mi%20asistencia%20a%20tus%2015"
           target="_blank" rel="noopener">WhatsApp</a>
+     
+     </div>
+ </section>
+
+   
+    <!-- <section class="section container" id="ubicacion"> -->
+      <!-- <div class="container"> -->
+      <!-- <div class="glass-card card" style="width: max-content; padding: 0.3rem 1rem;">
+        
+
+      </div><div style="padding: 0.5rem 1rem; margin: 0 auto" >
+        <div class="glass-card" style="overflow:hidden; border-radius:1rem; ; ">
+          <h2 style="font-family: nom; text-align: center;" >Ubicación</h2>
+           <p class="subtitle" style="text-align: center;">SALÓN Craigmhor <br> Plata Francisco Bilbao 2930, CABA</p>
+        
+          <iframe title="Mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.651867764314!2d-58.46670872447467!3d-34.63823685932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9808c15b821%3A0x4f9345018836fd61!2sCraigmhor!5e0!3m2!1ses-419!2sar!4v1756435018445!5m2!1ses-419!2sar"
+            width="90%" height="250" style="border:5;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"  >
+          </iframe>
+        </div>
       </div>
-      <p class="subtitle" style="margin-top:1rem">Regalo sugerido: sobre o <a href="#">alias bancario</a>.</p>
-      <div>
-        <a class="btn primary" href="https://formspree.io/f/your-id" target="_blank" rel="noopener">
-          Mia Ramirez Prieto <br> Alias: 15MiaRamirez <br> CVU: 0000003100068482561390 <br> CUIT/CUIL: 27505126977
-        </a>
-      </div>
+      
+
+    </section> -->
+
+
+<!-- 
+    <section class="section container" id="rsvp">
+      <div class="glass-card card" style="width: max-content; padding: 0.5rem 1rem;">
+        <h2>Confirmá tu asistencia</h2>
+        <p class="subtitle">Por favor, confirmá antes del <strong>10 de octubre</strong>.</p>
+      <div style="width: max-content; padding: 0.7rem 1.2rem;">
+        <a class="btn primary"
+          href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!%20Confirmo%20mi%20asistencia%20a%20tus%2015"
+          target="_blank" rel="noopener">WhatsApp</a>
+      </div></div> -->
+     
+     
+
+      <section class="section container" id="regalo2">
+       <div class="glass-card ubicacion-mapa-container">
+         <p class="subtitle" style="margin-top:1rem">Regalo sugerido: sobre o <a href="#">alias bancario</a>.</p>
+
+         <a class="btn primary"  target="_blank" rel="noopener">
+             Mia Ramirez Prieto <br> Alias: 15MiaRamirez <br> CVU: 0000003100068482561390 <br> CUIT/CUIL: 27505126977
+         </a>
+     
+        </div>
+      </section>
+
+
+      
+      
     </section>
   </main>
 
@@ -557,8 +601,8 @@
     let playing = false;
     btn.addEventListener('click', async () => {
       try {
-        if (!playing) { await player.play(); btn.textContent = '⏸️ Pausar'; }
-        else { player.pause(); btn.textContent = '▶️ Música'; }
+        if (!playing) { await player.play(); btn.textContent = '⏸ Pausar'; }
+        else { player.pause(); btn.textContent = '▶ Música'; }
         playing = !playing;
       } catch (e) { console.log(e) }
     });
