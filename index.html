@@ -39,7 +39,9 @@
     body {
       height: 100%;
     }
- @font-face {
+
+    
+    @font-face {
     font-family: 'nombreMia'; /* El nombre que le asignes */
     src: url('assets/font1.otf') format('opentype'); /* Asegúrate de que la ruta sea correcta */
     font-weight: normal;
@@ -166,6 +168,14 @@
       pointer-events: none;
     }
 
+    @font-face {
+    font-family: 'nombreMia'; /* Aquí la estás declarando */
+    src: url('assets/font1.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
     .hero-inner {
       position: relative;
       z-index: 1;
@@ -190,14 +200,16 @@
 
     .title span {
       display: block;
-      font-size: clamp(4rem, 12vw, 8rem);
+      font-size: clamp(10rem, 12vw, 8rem);
       font-weight: 700;
       letter-spacing: .02em;
       background: radial-gradient(circle at center, var(--brand), var(--accent));
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 24px rgb(255, 255, 255)
+      color: white;
+      text-shadow: 0 0 24px rgb(248, 246, 246);
+      font-family: 'nombreMia';
+      
     }
 
     .subtitle {
@@ -265,9 +277,12 @@
     }
 
     .btn.primary {
-      background: linear-gradient(90deg, var(--brand), var(--accent));
-      color: white;
+      background-color:lightgray ;
+      /* background: linear-gradient(90deg, var(--brand), var(--accent)); */
+      color: rgb(0, 0, 0);
       border: none
+      
+
     }
 
     /* Countdown */
@@ -377,8 +392,9 @@
       padding: .8rem 1rem;
       font-weight: 700;
       box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-      background: linear-gradient(90deg, var(--brand), var(--accent));
-      color: white;
+      /* background: linear-gradient(90deg, var(--brand), var(--accent)); */
+      background-color:lightgrey;
+      color: rgb(3, 3, 3);
       cursor: pointer
     }
   </style>
@@ -389,7 +405,7 @@
     <div class="hero-inner">
       <div class="badge">Invitación</div>
       <div class="title">
-        <span>MÍA XV</span>
+        <span style="font-family: 'nombreMia';">MÍA XV</span>
         
       </div>
 
