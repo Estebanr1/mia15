@@ -483,8 +483,10 @@
     <section class="section container " id="fecha">
       <div class="glass-card ubicacion-mapa-container"> 
         <h2>Fecha</h2>
-        <p class="subtitle" style="text-align: center;"> Sábado <strong>22 de Noviembre </strong>|
-        Horario <strong>21:00 hs</strong> a <strong>05:00 hs  </strong>|</p>     
+        <p class="subtitle" style="text-align: center;"> 
+          Sábado <strong>22 de Noviembre </strong><br>
+          Horario <strong>21:00 hs</strong> a <strong>05:00 hs  </strong>
+        </p>     
        
        </div>
        
@@ -527,7 +529,7 @@
         
       <div style="width: max-content; padding: 0.7rem 1.2rem;">
         <a class="btn primary"
-              href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!%F0%9F%8E%89%20Confirmo%20mi%20asistencia%20a%20tu%20s%C3%BAper%20fiesta.%F0%9F%8C%83%0A%0A%E2%9C%A6%20Nombre%20y%20apellido:%20%0A%0A%E2%9C%A6%20Restricci%C3%B3n%20alimenticia:%20"
+              href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!!%20Confirmo%20mi%20asistencia%20a%20tu%20s%C3%BAper%20fiesta.%20%F0%9F%8E%89%0A%0A%E2%9C%A6%20Nombre%20y%20apellido:%20%0A%0A%E2%9C%A6%20Restricci%C3%B3n%20alimenticia:%20"
           target="_blank" rel="noopener">WhatsApp</a>
      
      </div>
@@ -599,19 +601,18 @@
 
 
     
- // ===== Música
-const btn = document.getElementById('musicBtn');
-const player = document.getElementById('player');
-let playing = false;
+// ===== Música
+    const btn = document.getElementById('musicBtn');
+    const player = document.getElementById('player');
+    let playing = false;
+    btn.addEventListener('click', async () => {
+      try {
+        if (!playing) { await player.play(); btn.textContent = '⏸️ Pausar'; }
+        else { player.pause(); btn.textContent = '▶️ Música'; }
+        playing = !playing;
+      } catch (e) { console.log(e) }
+    });
 
-// Esta función se activará en el primer clic del usuario
-function startMusic() {
-  player.play();
-  playing = true;
-  btn.textContent = '⏸ Pausar';
-  // Elimina el evento para que no se active de nuevo
-  document.removeEventListener('click', startMusic);
-}
 
 // Agrega el evento para que la música se active con el primer clic
 document.addEventListener('click', startMusic, { once: true });
