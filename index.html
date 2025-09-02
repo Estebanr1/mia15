@@ -484,10 +484,9 @@
       <div class="glass-card ubicacion-mapa-container"> 
         <h2>Fecha</h2>
         <p class="subtitle" style="text-align: center;"> Sábado <strong>22 de Noviembre </strong>|
-        Horario <strong>21:00 hs</strong> a <strong>05:00 hs  </strong>|</p>
-        
-        <br> 
-        <br></div>
+        Horario <strong>21:00 hs</strong> a <strong>05:00 hs  </strong>|</p>     
+       
+       </div>
        
       
       
@@ -539,9 +538,9 @@
       <section class="section container" id="regalo2">
        <div class="glass-card ubicacion-mapa-container">
         <h2>Regalo</h2>
-        <p>Lo mas lindo es que estes conmigo esa noche, si ademas 
-deseas regalarme algo me encanta tanto un regalo material como una transferencia. 
-</p>
+          <p> Lo más lindo es que compartas esa noche conmigo.
+              Si además deseas regalarme algo, me encantaría tanto un regalo material como una transferencia.
+          </p>
         <p>Alias Bancario</p>
 
          <a class="btn primary"  target="_blank" rel="noopener" style="text-align: center;">
@@ -596,17 +595,41 @@ deseas regalarme algo me encanta tanto un regalo material como una transferencia
     tick();
     setInterval(tick, 1000);
 
-    // ===== Música
-    const btn = document.getElementById('musicBtn');
-    const player = document.getElementById('player');
-    let playing = false;
-    btn.addEventListener('click', async () => {
-      try {
-        if (!playing) { await player.play(); btn.textContent = '⏸ Pausar'; }
-        else { player.pause(); btn.textContent = '▶ Música'; }
-        playing = !playing;
-      } catch (e) { console.log(e) }
-    });
+
+    
+ // ===== Música
+const btn = document.getElementById('musicBtn');
+const player = document.getElementById('player');
+let playing = false;
+
+// Esta función se activará en el primer clic del usuario
+function startMusic() {
+  player.play();
+  playing = true;
+  btn.textContent = '⏸ Pausar';
+  // Elimina el evento para que no se active de nuevo
+  document.removeEventListener('click', startMusic);
+}
+
+// Agrega el evento para que la música se active con el primer clic
+document.addEventListener('click', startMusic, { once: true });
+
+// Evento para pausar la música con el botón
+btn.addEventListener('click', async () => {
+  try {
+    if (playing) {
+      player.pause();
+      btn.textContent = '▶ Música';
+    } else {
+      await player.play();
+      btn.textContent = '⏸ Pausar';
+    }
+    playing = !playing;
+  } catch (e) {
+    console.log(e);
+  }
+});
+    
 
     // ===== Suavizar anclas
     document.querySelectorAll('a[href^="#"]').forEach(a => {
