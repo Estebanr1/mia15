@@ -91,22 +91,49 @@
       /* Agrega esta línea */
     }
 
-  main {
+    main {
       background-image: url("assets/fondomain.jpg");
       background-size: cover;
-      /* Ajusta la imagen para cubrir todo el fondo sin distorsionarse */
+      /* Ajusta la imagen para cubrir todo el fondo sin distorsionarse */ 
       background-position: center center;
       /* Centra la imagen */
       background-attachment: fixed;
       /* Opcional: fija la imagen para que no se mueva al hacer scroll */
       background-repeat: no-repeat;
-      /* Evita que la imagen se repita */
+      /* /* Evita que la imagen se repita */
     }
 
-    .container {
-      width: min(1100px, 92%);
-      margin-inline: auto
+        .main {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
     }
+
+    .main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('assets/fondomain.jpg') center/cover no-repeat ;
+     
+    }
+
+    .main::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+     
+      pointer-events: none;
+    }
+
+   
+    .main-inner {
+      position: relative;
+      z-index: 1;
+      padding: 1.5rem 1rem;
+    }
+
     .container {
       width: min(1100px, 92%);
       margin-inline: auto
