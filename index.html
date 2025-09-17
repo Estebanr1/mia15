@@ -91,20 +91,22 @@
       /* Agrega esta línea */
     }
 
- main {
-  background-image: url("assets/fondomain.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-/* En iPhone deshabilitamos background-attachment */
-@supports (-webkit-touch-callout: none) {
   main {
-    background-attachment: scroll;
-  }
-}
+      background-image: url("assets/fondomain.jpg");
+      background-size: cover;
+      /* Ajusta la imagen para cubrir todo el fondo sin distorsionarse */
+      background-position: center center;
+      /* Centra la imagen */
+      background-attachment: fixed;
+      /* Opcional: fija la imagen para que no se mueva al hacer scroll */
+      background-repeat: no-repeat;
+      /* Evita que la imagen se repita */
+    }
 
+    .container {
+      width: min(1100px, 92%);
+      margin-inline: auto
+    }
     .container {
       width: min(1100px, 92%);
       margin-inline: auto
