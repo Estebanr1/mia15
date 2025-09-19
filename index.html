@@ -137,6 +137,14 @@
       z-index: 1;
       padding: 1.5rem 1rem;
     }
+.bg-fixed {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url("assets/fondomain.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1; /* queda atrás del contenido */
+}
 
     .container {
       width: min(1100px, 92%);
@@ -418,6 +426,8 @@
       color: rgb(3, 3, 3);
       cursor: pointer
     }
+
+
   </style>
 </head>
 
@@ -496,7 +506,7 @@
 
 
   </header>
-
+   <div class="bg-fixed"></div>
   <main>
     <section class="section container " id="fecha">
       <div class="glass-card ubicacion-mapa-container"> 
