@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -399,33 +400,49 @@
       margin-bottom: .3rem
     }
 
-    .copy-btn {
+dato-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 8px 0;
+}
+
+.dato-text {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.dato-text:hover {
+  opacity: 0.7;
+}
+
+.copy-btn {
   background: none;
   border: none;
   cursor: pointer;
   padding: 4px;
-  margin-left: 8px;
+  color: #ffffff;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
+  position: relative;
+  margin-left: 10px;
 }
 
 .copy-btn:hover {
   opacity: 0.7;
 }
 
-.copy-btn.copied {
-  color: #22c55e;
-}
-
 .copy-icon, .check-icon {
   width: 16px;
   height: 16px;
-  fill: #000000;
+  transition: all 0.3s ease;
 }
 
 .check-icon {
   display: none;
+  color: #ffffff;
 }
 
 .copy-btn.copied .copy-icon {
@@ -434,7 +451,6 @@
 
 .copy-btn.copied .check-icon {
   display: block;
-  fill: #22c55e;
 }
 
 .dato-row {
@@ -606,7 +622,7 @@
         
       <div style="width: max-content; padding: 0.7rem 1.2rem;">
         <a class="btn primary"
-              href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!!%20Confirmo%20mi%20asistencia%20a%20tu%20s%C3%BAper%20fiesta.%20%0A%0A%E2%9C%A6%20Nombre%20y%20apellido:%20%0A%0A%E2%9C%A6%20Restricci%C3%B3n%20alimenticia:%20"
+              href="https://wa.me/5491128438516?text=Hola%20M%C3%ADa!!%20Confirmo%20mi%20asistencia%20a%20tu%20s%C3%BAper%20fiesta.%20%0A%0A%E2%9C%A6%20Nombre%20y%20apellido:%20%0A%0A%E2%9C%A6%20Restricci%C3%B3n%20alimenticia:%20"
           target="_blank" rel="noopener">WhatsApp</a>
      
      </div>
@@ -633,56 +649,57 @@
         </div>
       </section> -->
 
-      <section class="section container" id="regalo2">
+     <section class="section container" id="regalo2">
   <div class="glass-card ubicacion-mapa-container">
     <h2>Regalo</h2>
     <p class="subtitle" style="text-align: center;">
       Tu presencia es el mejor regalo, pero si deseas obsequiar algo....
     </p>
     <p><strong>Datos Bancarios</strong></p>
-    <a class="btn primary"  target="_blank" rel="noopener" style="text-align: center;">
+    
     <div style="text-align: center;">
       <!-- Alias con botón copiar -->
       <div class="dato-row">
-        <span><strong>Alias:</strong> 15MiaRamirez</span>
+        <span class="dato-text" onclick="copyToClipboard('15MiaRamirez', this.parentElement.querySelector('.copy-btn'))">
+          <strong>Alias:</strong> 15MiaRamirez
+        </span>
         <button class="copy-btn" onclick="copyToClipboard('15MiaRamirez', this)">
-          <svg class="copy-icon" viewBox="0 0 24 24">
-            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
           </svg>
-          <svg class="check-icon" viewBox="0 0 24 24">
-            <polyline points="20,6 9,17 4,12"/>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20,6 9,17 4,12"></polyline>
           </svg>
         </button>
       </div>
-      
+
       <!-- CVU con botón copiar -->
       <div class="dato-row">
-        <span><strong>CVU:</strong> 0000003100068482561390</span>
+        <span class="dato-text" onclick="copyToClipboard('0000003100068482561390', this.parentElement.querySelector('.copy-btn'))">
+          <strong>CVU:</strong> 0000003100068482561390
+        </span>
         <button class="copy-btn" onclick="copyToClipboard('0000003100068482561390', this)">
-          <svg class="copy-icon" viewBox="0 0 24 24">
-            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
           </svg>
-          <svg class="check-icon" viewBox="0 0 24 24">
-            <polyline points="20,6 9,17 4,12"/>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20,6 9,17 4,12"></polyline>
           </svg>
         </button>
       </div>
-      
-      <!-- Datos sin botón copiar -->
-      <div style="margin: 8px 0;">
-        <span>Mia Ramirez Prieto</span>
+
+      <!-- Datos sin copiar -->
+      <div style="margin: 10px 0;">
+        <span><strong>Mia Ramirez Prieto</strong></span>
       </div>
-      
-      <div style="margin: 8px 0;">
+      <div style="margin: 10px 0;">
         <span><strong>CUIT/CUIL:</strong> 27505126977</span>
       </div>
     </div>
-    </a>
   </div>
 </section>
-
 
       
 
@@ -763,9 +780,11 @@ btn.addEventListener('click', async () => {
   }
 });
     // ===== COPIAR AL PORTAPAPELES
-    function copyToClipboard(text, button) {
+    
+  
+function copyToClipboard(text, button) {
   navigator.clipboard.writeText(text).then(function() {
-    // Agregar clase 'copied' para mostrar el check
+    // Agregar clase copied
     button.classList.add('copied');
     
     // Remover la clase después de 2 segundos
@@ -776,6 +795,7 @@ btn.addEventListener('click', async () => {
     console.error('Error al copiar: ', err);
   });
 }
+
 
 
 
